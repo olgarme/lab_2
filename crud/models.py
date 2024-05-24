@@ -32,7 +32,7 @@ class Course(models.Model):
     # Many-To-Many relationship with Instructors
     instructors = models.ManyToManyField(Instructor)
     # Many-To-Many relationship with Learner via Enrollment relationship
-    learners = models.ManyToManyField(Learner, through='Enrollment')
+    learners = models.ManyToManyField('Learner', through='Enrollment')
 
     def __str__(self):
         return "Name: " + self.name + "," + \

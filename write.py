@@ -60,13 +60,6 @@ def clean_data():
     Course.objects.all().delete()
     Lesson.objects.all().delete()
 
-    # Clean any existing data first
-clean_data()
-write_courses()
-write_instructors()
-write_lessons()
-write_learners()
-
 def write_learners():
     # Add Learners
     learner_james = Learner(first_name='James', last_name='Smith', dob=date(1982, 7, 16),
@@ -90,3 +83,11 @@ def write_learners():
     print("Learner objects all saved... ")
     #<HINT> Add more learners objects#
     #...
+
+    # Clean any existing data first
+clean_data()
+write_courses()
+write_instructors()
+write_lessons()
+write_learners()
+
